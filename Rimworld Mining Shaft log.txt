@@ -1,0 +1,43 @@
+Iterating over maps to gather a list of buildings:
+Current map: Map-0-PlayerHome
+Map didn't contain an underground lift.
+Current map: Map-8
+Found lift: undergroundlift1561498
+Current map: Map-13
+Found lift: undergroundlift1997955
+Current map: Map-15
+Map didn't contain an underground lift.
+
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+Verse.Log:Warning (string)
+DeepRim.Building_MiningShaft:tryReconfigureAll ()
+Verse.Command_Action:ProcessInput (UnityEngine.Event)
+Verse.GizmoGridDrawer:DrawGizmoGrid (System.Collections.Generic.IEnumerable`1<Verse.Gizmo>,single,Verse.Gizmo&,System.Func`2<Verse.Gizmo, bool>,System.Func`2<Verse.Gizmo, bool>,System.Func`2<Verse.Gizmo, bool>,bool)
+(wrapper dynamic-method) MonoMod.Utils.DynamicMethodDefinition:RimWorld.InspectGizmoGrid.DrawInspectGizmoGridFor_Patch0 (System.Collections.Generic.IEnumerable`1<object>,Verse.Gizmo&)
+RimWorld.MainTabWindow_Inspect:DrawInspectGizmos ()
+RimWorld.InspectPaneUtility:ExtraOnGUI (RimWorld.IInspectPane)
+RimWorld.MainTabWindow_Inspect:ExtraOnGUI ()
+Verse.WindowStack:WindowStackOnGUI ()
+(wrapper dynamic-method) MonoMod.Utils.DynamicMethodDefinition:RimWorld.UIRoot_Play.UIRootOnGUI_Patch4 (RimWorld.UIRoot_Play)
+(wrapper dynamic-method) MonoMod.Utils.DynamicMethodDefinition:Verse.Root.OnGUI_Patch2 (Verse.Root)
+
+System.NullReferenceException: Object reference not set to an instance of an object
+[Ref 2317EB29]
+ at DeepRim.LiftUtils.StageSend (Verse.Building sender, System.Boolean bringUp) [0x00028] in <087bf10c40754b9a84acdea330c31169>:0 
+ at DeepRim.Building_MiningShaft.Send () [0x00000] in <087bf10c40754b9a84acdea330c31169>:0 
+ at Verse.Command_Action.ProcessInput (UnityEngine.Event ev) [0x00007] in <f0ac5eb9b52e4cc396c70fc9a4ee15e5>:0 
+ at Verse.GizmoGridDrawer.DrawGizmoGrid (System.Collections.Generic.IEnumerable`1[T] gizmos, System.Single startX, Verse.Gizmo& mouseoverGizmo, System.Func`2[T,TResult] customActivatorFunc, System.Func`2[T,TResult] highlightFunc, System.Func`2[T,TResult] lowlightFunc, System.Boolean multipleSelected) [0x007a8] in <f0ac5eb9b52e4cc396c70fc9a4ee15e5>:0 
+ at RimWorld.InspectGizmoGrid.DrawInspectGizmoGridFor (System.Collections.Generic.IEnumerable`1[T] selectedObjects, Verse.Gizmo& mouseoverGizmo) [0x001f7] in <f0ac5eb9b52e4cc396c70fc9a4ee15e5>:0 
+     - TRANSPILER UnlimitedHugs.AllowTool: IEnumerable`1 AllowTool.Patches.InspectGizmoGrid_DrawInspectGizmoGridFor_Patch:ClearReverseDesignators(IEnumerable`1 instructions)
+     - TRANSPILER PerformanceOptimizer.Main: IEnumerable`1 PerformanceOptimizer.Optimization_InspectGizmoGrid_DrawInspectGizmoGridFor:InspectGizmoGrid_DrawInspectGizmoGridForTranspiler(IEnumerable`1 instructions) currentSelectable: null
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+(wrapper dynamic-method) MonoMod.Utils.DynamicMethodDefinition:Verse.Log.Error_Patch5 (string)
+Verse.Log:ErrorOnce (string,int)
+(wrapper dynamic-method) MonoMod.Utils.DynamicMethodDefinition:RimWorld.InspectGizmoGrid.DrawInspectGizmoGridFor_Patch0 (System.Collections.Generic.IEnumerable`1<object>,Verse.Gizmo&)
+RimWorld.MainTabWindow_Inspect:DrawInspectGizmos ()
+RimWorld.InspectPaneUtility:ExtraOnGUI (RimWorld.IInspectPane)
+RimWorld.MainTabWindow_Inspect:ExtraOnGUI ()
+Verse.WindowStack:WindowStackOnGUI ()
+(wrapper dynamic-method) MonoMod.Utils.DynamicMethodDefinition:RimWorld.UIRoot_Play.UIRootOnGUI_Patch4 (RimWorld.UIRoot_Play)
+(wrapper dynamic-method) MonoMod.Utils.DynamicMethodDefinition:Verse.Root.OnGUI_Patch2 (Verse.Root)
+
